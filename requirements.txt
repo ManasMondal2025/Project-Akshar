@@ -1,0 +1,203 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# PROJECT AKSHAR — Unified requirements.txt
+# Python: 3.9+   |   Environment: myenv1
+#
+# Covers:
+#   - Module 1 backend  (port 8000): upload, transform, corners, pipeline, OCR, QA
+#   - Module 2 backend  (port 8001): dewarp, deskew, enhancement, poly-dewarp, ML-dewarp
+#   - Module 3          : layout detection + OCR pipeline
+#
+# Install:
+#   source myenv1/bin/activate
+#   pip install -r requirements.txt
+#
+# System dependencies (macOS — one-time):
+#   brew install poppler          # required by pdf2image
+#
+# Notes:
+#   - sarvamai SDK: pip install sarvamai
+#   - For GPU support, replace torch/torchvision with CUDA variants
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Web Framework ──────────────────────────────────────────────────────────────
+fastapi==0.128.8
+uvicorn==0.39.0
+uvloop==0.22.1
+starlette==0.49.3
+httptools==0.7.1
+watchfiles==1.1.1
+websockets==15.0.1
+python-multipart==0.0.9
+
+# ── Flask (used in some standalone routes) ────────────────────────────────────
+Flask==3.1.3
+Werkzeug==3.1.8
+blinker==1.9.0
+itsdangerous==2.2.0
+click==8.1.8
+
+# ── HTTP Clients ───────────────────────────────────────────────────────────────
+requests==2.32.5
+httpx==0.28.1
+httpx-sse==0.4.3
+httpcore==1.0.9
+h11==0.16.0
+aiohttp==3.13.5
+aiosignal==1.4.0
+aiohappyeyeballs==2.6.1
+async-timeout==4.0.3
+yarl==1.22.0
+multidict==6.7.1
+frozenlist==1.8.0
+propcache==0.4.1
+
+# ── Data Validation & Settings ────────────────────────────────────────────────
+pydantic==2.13.3
+pydantic-settings==2.11.0
+pydantic_core==2.46.3
+annotated-types==0.7.0
+
+# ── Deep Learning — PyTorch (CPU build; swap for GPU variant if needed) ───────
+torch==2.8.0
+torchvision==0.23.0
+safetensors==0.7.0
+
+# ── Computer Vision ───────────────────────────────────────────────────────────
+opencv-python-headless==4.13.0.92
+opencv-contrib-python>=4.10.0
+Pillow==11.3.0
+scikit-image>=0.22.0
+
+# ── PDF Tools ─────────────────────────────────────────────────────────────────
+PyMuPDF==1.26.5
+pdf2image==1.17.0
+img2pdf==0.6.3
+pikepdf==9.11.0
+
+# ── OCR Stack (PaddlePaddle — local inference, no API key required) ───────────
+paddlepaddle==3.3.1
+paddleocr==3.4.0
+paddlex==3.4.3
+pyclipper==1.3.0.post6
+shapely==2.0.7
+
+# ── Sarvam AI SDK (Module 1 /run-ocr-sarvam endpoint) ────────────────────────
+# Install via: pip install sarvamai
+sarvamai
+
+# ── Embeddings & Vector Store (Module 3 & 4) ─────────────────────────────────
+sentence-transformers==5.1.2
+chromadb==1.5.8
+tokenizers==0.22.2
+
+# ── LangChain (used in pipeline/RAG orchestration) ───────────────────────────
+langchain==0.3.28
+langchain-community==0.3.31
+langchain-core==0.3.84
+langchain-text-splitters==0.3.11
+langsmith==0.4.37
+
+# ── Numerical / Scientific ────────────────────────────────────────────────────
+numpy==2.0.2
+scipy==1.13.1
+scikit-learn==1.6.1
+sympy==1.14.0
+mpmath==1.3.0
+
+# ── Geometry ──────────────────────────────────────────────────────────────────
+shapely==2.0.7
+
+# ── ML / Inference Runtimes ───────────────────────────────────────────────────
+onnxruntime==1.19.2
+flatbuffers==25.12.19
+transformers==4.57.6
+huggingface_hub==0.36.2
+hf-xet==1.4.3
+
+# ── OpenTelemetry (ChromaDB instrumentation) ──────────────────────────────────
+opentelemetry-api==1.41.1
+opentelemetry-sdk==1.41.1
+opentelemetry-exporter-otlp-proto-grpc==1.41.1
+opentelemetry-exporter-otlp-proto-common==1.41.1
+opentelemetry-proto==1.41.1
+opentelemetry-semantic-conventions==0.62b1
+googleapis-common-protos==1.74.0
+grpcio==1.80.0
+protobuf==6.33.6
+
+# ── Database ──────────────────────────────────────────────────────────────────
+SQLAlchemy==2.0.49
+
+# ── Serialization & Config ────────────────────────────────────────────────────
+PyYAML==6.0.3
+python-dotenv==1.2.1
+orjson==3.11.5
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+jsonpatch==1.33
+jsonpointer==3.0.0
+referencing==0.36.2
+rpds-py==0.27.1
+marshmallow==3.26.2
+dataclasses-json==0.6.7
+typing-inspect==0.9.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+mypy_extensions==1.1.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm==4.67.3
+tenacity==9.1.2
+requests-oauthlib==2.0.0
+requests-toolbelt==1.0.0
+oauthlib==3.3.1
+filelock==3.19.1
+fsspec==2025.10.0
+packaging==25.0
+six==1.17.0
+wrapt==2.1.2
+Deprecated==1.3.1
+networkx==3.2.1
+regex==2026.1.15
+python-dateutil==2.9.0.post0
+uuid_utils==0.14.1
+zstandard==0.25.0
+zipp==3.23.1
+importlib_metadata==8.7.1
+importlib_resources==6.5.2
+
+# ── CLI & Terminal ────────────────────────────────────────────────────────────
+typer==0.23.2
+rich==15.0.0
+shellingham==1.5.4
+coloredlogs==15.0.1
+humanfriendly==10.0
+Pygments==2.20.0
+markdown-it-py==3.0.0
+mdurl==0.1.2
+
+# ── Build Tools ───────────────────────────────────────────────────────────────
+build==1.4.4
+pyproject_hooks==1.2.0
+tomli==2.4.1
+
+# ── Misc ──────────────────────────────────────────────────────────────────────
+annotated-doc==0.0.4
+bcrypt==5.0.0
+certifi==2026.4.22
+charset-normalizer==3.4.7
+idna==3.13
+urllib3==2.6.3
+websocket-client==1.9.0
+mmh3==5.2.0
+overrides==7.7.0
+pybase64==1.4.3
+PyPika==0.51.1
+durationpy==0.10
+exceptiongroup==1.3.1
+joblib==1.5.3
+threadpoolctl==3.6.0
+lxml==6.1.0
+MarkupSafe==3.1.2
+Jinja2==3.1.6
+kubernetes==35.0.0
