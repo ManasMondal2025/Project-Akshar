@@ -74,6 +74,9 @@ Required by Module 2 for automatic document dewarping.
 
 #### **B. CNN Corner Detection Model (`best_model_fold_5.pth`)**
 Required by Module 1 for ML-assisted corner detection.
+- **Source:** [Corner Detection Weight](https://drive.google.com/file/d/1YhSpmTSgb1XSblkkW6VFKfGGBVpJRCph/view?usp=sharing)
+- **Download:** Go to the Releases section of that repo and download `best_model_fold_5.pth`
+- **Place at:**
 - **Place at:**
   ```
   module1/backend/pretrained_models/best_model_fold_5.pth
