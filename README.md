@@ -1,7 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:2575fc&height=230&section=header&text=Project%20Akshar&fontSize=68&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Document%20Intelligence%20%26%20Grounded%20VQA&descSize=22&descAlignY=62" alt="Project Akshar banner" />
+  <img
+    src="assets/images/project-akshar-banner.svg"
+    alt="Project Akshar — Document Intelligence and Grounded VQA"
+    width="100%"
+  />
 </p>
-
 <h3 align="center">📄 From a crooked phone photo of a book page ➜ 🧠 a searchable knowledge base ➜ 🎯 answers with the exact source highlighted</h3>
 
 <p align="center">
