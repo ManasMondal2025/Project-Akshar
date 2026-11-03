@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="430" viewBox="0 0 1600 430" role="img" aria-labelledby="title desc">
+<title id="title">Project Akshar — Document Intelligence and Grounded VQA</title>
+<desc id="desc">A visual banner showing a photographed document transformed into a searchable knowledge base and a grounded answer.</desc>
+<defs>
+  <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#10152f"/>
+    <stop offset="0.55" stop-color="#182c55"/>
+    <stop offset="1" stop-color="#273b78"/>
+  </linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#40e0d0"/>
+    <stop offset="1" stop-color="#75a7ff"/>
+  </linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#050b1c" flood-opacity=".35"/>
+  </filter>
+</defs>
+
+<rect width="1600" height="430" rx="30" fill="url(#background)"/>
+<circle cx="1450" cy="50" r="250" fill="#72a7ff" opacity=".08"/>
+<circle cx="120" cy="420" r="240" fill="#40e0d0" opacity=".07"/>
+<path d="M0 340 C300 270 470 460 800 350 S1320 260 1600 340" fill="none" stroke="#8eb7ff" stroke-opacity=".13" stroke-width="2"/>
+
+<!-- Title area -->
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <text x="90" y="145" font-size="68" font-weight="800" letter-spacing="-2" fill="#ffffff">PROJECT AKSHAR</text>
+  <rect x="94" y="170" width="110" height="6" rx="3" fill="url(#accent)"/>
+  <text x="94" y="225" font-size="27" font-weight="600" fill="#dce8ff">Document Intelligence &amp; Grounded VQA</text>
+  <text x="94" y="274" font-size="20" fill="#b9c9e8">From a crooked page photo to a searchable knowledge base</text>
+  <text x="94" y="306" font-size="20" fill="#b9c9e8">— with answers grounded in the original source.</text>
+  <g transform="translate(95 350)">
+    <rect width="145" height="38" rx="19" fill="#ffffff" fill-opacity=".10" stroke="#ffffff" stroke-opacity=".20"/>
+    <text x="72" y="25" text-anchor="middle" font-size="15" font-weight="600" fill="#e9f2ff">OCR + RAG</text>
+    <rect x="158" width="170" height="38" rx="19" fill="#ffffff" fill-opacity=".10" stroke="#ffffff" stroke-opacity=".20"/>
+    <text x="243" y="25" text-anchor="middle" font-size="15" font-weight="600" fill="#e9f2ff">Visual Grounding</text>
+    <rect x="341" width="155" height="38" rx="19" fill="#ffffff" fill-opacity=".10" stroke="#ffffff" stroke-opacity=".20"/>
+    <text x="418" y="25" text-anchor="middle" font-size="15" font-weight="600" fill="#e9f2ff">Local AI</text>
+  </g>
+</g>
+
+<!-- Document card -->
+<g transform="translate(760 76)" filter="url(#shadow)">
+  <rect x="0" y="0" width="190" height="250" rx="18" fill="#f7f9ff"/>
+  <path d="M142 0 L190 48 L142 48 Z" fill="#dce6f8"/>
+  <rect x="28" y="58" width="112" height="9" rx="4.5" fill="#9aaaca"/>
+  <rect x="28" y="82" width="132" height="6" rx="3" fill="#c0cbe0"/>
+  <rect x="28" y="99" width="118" height="6" rx="3" fill="#c0cbe0"/>
+  <rect x="28" y="116" width="130" height="6" rx="3" fill="#c0cbe0"/>
+  <rect x="28" y="150" width="130" height="52" rx="7" fill="#e7efff" stroke="#9ab7f5" stroke-width="2"/>
+  <path d="M40 185 L62 165 L82 179 L104 158 L145 188" fill="none" stroke="#557dd0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="95" y="230" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#536887">DOCUMENT</text>
+</g>
+
+<!-- Arrow 1 -->
+<path d="M970 200 H1030" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+<path d="M1017 187 L1032 200 L1017 213" fill="none" stroke="#75a7ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- Knowledge base / vector nodes -->
+<g transform="translate(1050 100)" filter="url(#shadow)">
+  <rect width="205" height="205" rx="22" fill="#142343" stroke="#6c91d5" stroke-opacity=".8" stroke-width="2"/>
+  <g fill="none" stroke="#67d9d0" stroke-width="3">
+    <path d="M50 70 L102 42 L153 72 L153 132 L102 162 L50 132 Z"/>
+    <path d="M50 70 L102 100 L153 72 M102 100 V162"/>
+    <path d="M50 132 L102 100 L153 132"/>
+  </g>
+  <g fill="#8ab4ff">
+    <circle cx="50" cy="70" r="7"/><circle cx="102" cy="42" r="7"/><circle cx="153" cy="72" r="7"/>
+    <circle cx="50" cy="132" r="7"/><circle cx="102" cy="162" r="7"/><circle cx="153" cy="132" r="7"/>
+    <circle cx="102" cy="100" r="8" fill="#40e0d0"/>
+  </g>
+  <text x="102" y="190" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#e6f0ff">KNOWLEDGE BASE</text>
+</g>
+
+<!-- Arrow 2 -->
+<path d="M1275 200 H1322" stroke="url(#accent)" stroke-width="5" stroke-linecap="round"/>
+<path d="M1309 187 L1324 200 L1309 213" fill="none" stroke="#75a7ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+<!-- Grounded answer card -->
+<g transform="translate(1340 115)" filter="url(#shadow)">
+  <rect width="205" height="175" rx="20" fill="#f7f9ff"/>
+  <circle cx="31" cy="33" r="14" fill="#d9f8f1"/>
+  <path d="M24 33 L29 38 L39 27" fill="none" stroke="#159c87" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="55" y="27" width="115" height="10" rx="5" fill="#7b91b8"/>
+  <rect x="22" y="65" width="158" height="7" rx="3.5" fill="#c2cde0"/>
+  <rect x="22" y="84" width="145" height="7" rx="3.5" fill="#c2cde0"/>
+  <rect x="22" y="103" width="160" height="24" rx="5" fill="#fff0a8"/>
+  <rect x="22" y="139" width="118" height="7" rx="3.5" fill="#c2cde0"/>
+  <text x="102" y="166" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#536887">SOURCE-HIGHLIGHTED ANSWER</text>
+</g>
+</svg>
